@@ -13,7 +13,7 @@ To get the difference in milliseconds, use `moment#diff` like you would use `mom
 ```javascript
 var a = moment([2007, 0, 29]);
 var b = moment([2007, 0, 28]);
-a.diff(b) // 86400000
+a.diff(b); // 86400000
 ```
 
 To get the difference in another unit of measurement, pass that measurement as the second argument.
@@ -21,7 +21,7 @@ To get the difference in another unit of measurement, pass that measurement as t
 ```javascript
 var a = moment([2007, 0, 29]);
 var b = moment([2007, 0, 28]);
-a.diff(b, 'days') // 1
+a.diff(b, 'days'); // 1
 ```
 
 The supported measurements are years, months, weeks, days, hours, minutes, and seconds. For ease of development, the singular forms are supported as of **2.0.0**. Units of measurement other than milliseconds are available in version **1.1.1**.
@@ -40,16 +40,16 @@ If the moment is earlier than the moment you are passing to `moment.fn.diff`, th
 ```javascript
 var a = moment();
 var b = moment().add(1, 'seconds');
-a.diff(b) // -1000
-b.diff(a) // 1000
+a.diff(b); // -1000
+b.diff(a); // 1000
 ```
 
 An easy way to think of this is by replacing `.diff(` with a minus operator.
 
 ```javascript
           // a < b
-a.diff(b) // a - b < 0
-b.diff(a) // b - a > 0
+a.diff(b); // a - b < 0
+b.diff(a); // b - a > 0
 ```
 
 #### Month and year diffs
